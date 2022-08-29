@@ -1,0 +1,19 @@
+{
+    "name": "Theme Selector",
+    "manifest_version": 3,
+    "version": "0.1.0",
+    "description": "Chrome extension that sets your page theme.",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["page.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }, 
+    "permissions": ["tabs", "storage"]
+}
